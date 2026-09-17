@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Registrar usuario</title>
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="titulo"><a href="/index.html">🌎LingoWeb🌍</a></h1>
+        <p class="subtitulo">Aprende Inglés, Alemán y Chino gratis y de forma divertida</p>
+    </header>
+    <main>
+        <!-- se cambia a GET. Metodo no permitido 405 -->
+        <form class="registrar-form" action="./usuario_registrado.html">
+            <section class="registrar-input_container">
+                <label for="usuario">Usuario</label>
+                <input type="text" name="usuario" id="usuario" required>
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email">
+                <label for="contrasenia">Contraseña</label>
+                <input type="password" name="contrasenia" id="contrasenia" required>
+            </section>
+            <button class="registrar-boton_iniciar" type="submit">Registrar usuario</button>
+            <a href="../login/index.html" class="registrar-link">¿Tienes cuenta? Inicia sesión aquí</a>
+        </form>
+    </main>
+</body>
+
+</html>
