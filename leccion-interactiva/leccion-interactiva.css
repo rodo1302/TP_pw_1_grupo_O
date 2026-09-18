@@ -87,11 +87,17 @@ body,
   width: 100%;
   max-width: 800px;
   padding: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
 }
 .leccion-respuesta h3,
 .leccion-oracion h3 {
   padding-bottom: 16px;
   font-size: 1.5em;
+  width: 100%;
 }
 
 /* botones */
