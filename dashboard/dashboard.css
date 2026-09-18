@@ -104,11 +104,11 @@
 }
 
 .stat-item.racha strong {
-  color: var(--color-acento); /* Naranja / Fuego */
+  color: var(--color-acento);
 }
 
 .stat-item.xp strong {
-  color: var(--color-resalte-sombra); /* Amarillo / Rayo */
+  color: var(--color-resalte-sombra);
 }
 
 .separador {
@@ -119,6 +119,7 @@
 /* ==========================================================================
    Adaptación Mobile (Pantallas de menos de 768px)
    ========================================================================== */
+
 @media (max-width: 768px) {
   /* El header superior solo mantiene el Logo y los Indicadores */
   .contenedor-nav {
@@ -129,7 +130,7 @@
     font-size: 1.1rem; /* Logo más compacto */
   }
 
-  /* Transformamos el menú de enlaces en una Bottom Navigation Bar (Barra inferior) */
+  /* Transformamos el menú a Barra inferior */
   .menu-enlaces {
     position: fixed;
     bottom: 0;
@@ -162,17 +163,17 @@
   }
 
   .btn-nav.activo .nav-icono {
-    transform: scale(1.15); /* Resalta el icono seleccionado */
+    transform: scale(1.15);
   }
 
-  /* Compensación de espacio en el body para que la barra inferior no tape el footer */
+  /* para que el menu no tape el footer */
   body {
     padding-bottom: 60px;
   }
 }
 
 /* ==========================================================================
-   Layout Principal del Dashboard (Grilla de 2 columnas)
+   Principal del Dashboard (Grilla de 2 columnas)
    ========================================================================== */
 body {
   display: flex;
@@ -295,7 +296,7 @@ body {
   align-items: center;
   justify-content: space-around;
   gap: 16px;
-  padding: 12px 0;
+  padding: 16px 0;
   border-bottom: 1px solid var(--color-borde);
 }
 

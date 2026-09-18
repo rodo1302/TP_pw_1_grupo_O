@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../index.css">
+  <link rel="stylesheet" href="contacto.css">
+  <link rel="stylesheet" href="../dashboard/dashboard.css">
+  <title>Grupo O</title>
+</head>
+
+<body>
+  <header class="navegacion">
+    <nav class="contenedor-nav">
+      <a href="#dashboard" class="logo-marca">
+        <img src="../img/logo-lingo.svg" alt="Lingo Panda" class="img-logo">
+        <span class="nombre-brand">LingoPanda</span>
+      </a>
+
+      <div class="menu-enlaces">
+        <a href="../dashboard/dashboard.html" class="btn-nav">Curso</a>
+        <a href="#" class="btn-nav">Perfil</a>
+        <a href="#" class="btn-nav">Clasificación</a>
+      </div>
+
+      <div class="indicadores-header">
+        <p class="stat-item racha">🔥 <strong>5 dias</strong>
+          <span class="separador">|</span>
+        <p class="stat-item xp">⚡ <strong>350 XP</strong></p>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section class="formulario">
+      <form action="#mensaje" method="GET">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" name="apellido" required>
+        <label for="email">e-mail:</label>
+        <input type="email" name="email" id="email">
+        <label for="mensaje">Mensaje:</label>
+        <textarea name="mensaje-texto" id="mensaje-texto" placeholder="Escriba su mensaje ..." required></textarea>
+
+        <div class="botones">
+          <button type="submit" class="btn-enviar">Enviar</button>
+          <a href="../dashboard/dashboard.html" class="btn-cancelar">Cancelar</a>
+        </div>
+      </form>
+
+      <section id="mensaje" class="vista-mensaje">
+        <div class="tarjeta-mensaje">
+          <h2>¡Formulario Enviado!</h2>
+          <p>Gracias por contactarte con LingoPanda.</p>
+          <a href="../dashboard/dashboard.html" class="btn-volver">Volver al Curso</a>
+        </div>
+      </section>
+
+    </section>
+  </main>
+  <footer class="footer">
+    <small>&copy; 2026 LingoPanda. Todos los derechos reservados.</small>
+  </footer>
+</body>
+
+</html>

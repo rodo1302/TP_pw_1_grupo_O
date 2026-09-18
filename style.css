@@ -1,13 +1,14 @@
+/* ---- CSS global --------*/
+
 :root {
-  /* Paleta Inspirada en Panda Rojo & Duolingo */
-  --color-naranja-panda: #ff7a00; /* Color principal vibrante */
-  --color-naranja-oscuro: #e06300; /* Borde inferior 3D del naranja */
+  --color-naranja-panda: #ff7a00; /* Color principal  */
+  --color-naranja-oscuro: #e06300; /* Borde inferior  */
   --color-rojo-fuego: #ff4b4b; /* Acento / Vidas / Errores */
-  --color-rojo-oscuro: #ea2b2b; /* Borde inferior 3D del rojo */
+  --color-rojo-oscuro: #ea2b2b; /* Borde inferior del rojo */
   --color-amarillo-racha: #ffb800; /* Resalte / Rachas / Estrellas */
-  --color-amarillo-oscuro: #d99b00; /* Borde inferior 3D del amarillo */
+  --color-amarillo-oscuro: #d99b00; /* Borde inferior del amarillo */
   --color-verde-exito: #58cc02; /* Respuestas correctas / Avance */
-  --color-verde-oscuro: #46a302; /* Borde inferior 3D del verde */
+  --color-verde-oscuro: #46a302; /* Borde inferior del verde */
 
   /* Mapeo Semántico */
   --color-primario: var(--color-naranja-panda);
@@ -19,13 +20,13 @@
   --color-resalte: var(--color-amarillo-racha);
   --color-resalte-sombra: var(--color-amarillo-oscuro);
 
-  /* Fondos, Textos y Detalles (Estilo Flat UI) */
+  /* Fondos, Textos y Detalles */
   --color-bg: #fff9f5; /* Blanco cálido con matiz naranja suave */
   --color-superficie: #ffffff; /* Tarjetas y contenedores */
   --color-texto: #3c3c3c; /* Gris oscuro antideslumbrante */
   --color-texto-grisado: #afafaf; /* Subtextos y elementos deshabilitados */
   --color-borde: #e5e5e5; /* Bordes neutros */
-  --color-borde-inferior: #d6d6d6; /* Borde 3D para tarjetas neutras */
+  --color-borde-inferior: #d6d6d6; /* Borde para tarjetas neutras */
 
   /* Radios de borde característicos de Duolingo */
   --radius-boton: 12px;
