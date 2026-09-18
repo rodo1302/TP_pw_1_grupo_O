@@ -1,0 +1,153 @@
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+/*----Header---------*/
+
+.encabezado {
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px 24px;
+}
+
+.logo-marca {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.img-logo {
+  width: 36px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.nombre-brand {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--color-primario);
+  letter-spacing: -0.5px;
+}
+
+/*-------Main---------*/
+
+.contenedor-principal {
+  flex: 1;
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 40px 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+}
+
+.imagen-principal {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.mascota {
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+  /* Animación flotante suave para la mascota */
+  animation: flotar 3s ease-in-out infinite;
+}
+
+.contenido {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.contenido h1 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  line-height: 1.25;
+  color: var(--color-texto);
+}
+
+.contenido p {
+  font-size: 1.1rem;
+  color: var(--color-texto-grisado);
+  line-height: 1.5;
+}
+
+.btn-comenzar {
+  display: inline-block;
+  width: 100%;
+  max-width: 320px;
+  padding: 16px 24px;
+  margin-top: 10px;
+
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: #ffffff;
+
+  background-color: var(--color-secundario);
+  border: 2px solid var(--color-secundario-sombra);
+  border-bottom: 5px solid var(--color-secundario-sombra);
+  border-radius: var(--radius-boton);
+}
+
+.btn-comenzar:hover {
+  background-color: var(--color-primario);
+  border-color: var(--color-primario-sombra);
+  border-bottom-color: var(--color-primario-sombra);
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.btn-comenzar:active {
+  transform: translateY(3px);
+  border-bottom-width: 2px;
+}
+
+/*------- Footer ----------- */
+
+.footer {
+  margin-top: auto;
+  border-top: 2px solid var(--color-borde);
+  padding: 16px;
+  text-align: center;
+  background-color: var(--color-superficie);
+}
+
+.footer small {
+  color: var(--color-texto-grisado);
+  font-size: 0.8rem;
+}
+
+/* Adaptabilidad Mobile */
+@media (max-width: 768px) {
+  .contenedor-principal {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+    padding-top: 20px;
+  }
+
+  .contenido {
+    align-items: center;
+  }
+
+  .contenido h1 {
+    font-size: 1.6rem;
+  }
+
+  .mascota {
+    max-width: 200px;
+  }
+}

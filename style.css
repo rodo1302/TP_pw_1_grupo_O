@@ -1,22 +1,36 @@
+/* ---- CSS global --------*/
+
 :root {
-  /* Paleta Tetrádica */
-  --color-verde: #7cd9ab;
-  --color-violeta: #7c7cd9;
-  --color-magenta: #d97cab;
-  --color-ambar: #d9d97c;
+  --color-naranja-panda: #ff7a00; /* Color principal  */
+  --color-naranja-oscuro: #e06300; /* Borde inferior  */
+  --color-rojo-fuego: #ff4b4b; /* Acento / Vidas / Errores */
+  --color-rojo-oscuro: #ea2b2b; /* Borde inferior del rojo */
+  --color-amarillo-racha: #ffb800; /* Resalte / Rachas / Estrellas */
+  --color-amarillo-oscuro: #d99b00; /* Borde inferior del amarillo */
+  --color-verde-exito: #58cc02; /* Respuestas correctas / Avance */
+  --color-verde-oscuro: #46a302; /* Borde inferior del verde */
 
-  /* Mapeo */
-  --color-primario: var(--color-violeta);
-  --color-secundario: var(--color-verde);
-  --color-acento: var(--color-magenta);
-  --color-resalte: var(--color-ambar);
+  /* Mapeo Semántico */
+  --color-primario: var(--color-naranja-panda);
+  --color-primario-sombra: var(--color-naranja-oscuro);
+  --color-secundario: var(--color-verde-exito);
+  --color-secundario-sombra: var(--color-verde-oscuro);
+  --color-acento: var(--color-rojo-fuego);
+  --color-acento-sombra: var(--color-rojo-oscuro);
+  --color-resalte: var(--color-amarillo-racha);
+  --color-resalte-sombra: var(--color-amarillo-oscuro);
 
-  /* Fondos, textos y bordes */
-  --color-bg: #f8f9fa;
-  --color-superficie: #ffffff;
-  --color-texto: #212529;
-  --color-texto-grisado: #6c757d;
-  --color-borde: #e9ecef;
+  /* Fondos, Textos y Detalles */
+  --color-bg: #fff9f5; /* Blanco cálido con matiz naranja suave */
+  --color-superficie: #ffffff; /* Tarjetas y contenedores */
+  --color-texto: #3c3c3c; /* Gris oscuro antideslumbrante */
+  --color-texto-grisado: #afafaf; /* Subtextos y elementos deshabilitados */
+  --color-borde: #e5e5e5; /* Bordes neutros */
+  --color-borde-inferior: #d6d6d6; /* Borde para tarjetas neutras */
+
+  /* Radios de borde característicos de Duolingo */
+  --radius-boton: 12px;
+  --radius-tarjeta: 16px;
 
   --fuente-base:
     system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
@@ -37,19 +51,31 @@ body {
   background-color: var(--color-bg);
 }
 
+/* Botones Base estilo 3D Duolingo */
 button {
   cursor: pointer;
   border: none;
   background: none;
+  font-family: var(--fuente-base);
+  font-weight: bold;
+  user-select: none;
+  transition:
+    transform 0.1s ease,
+    background-color 0.1s ease;
+}
+
+button:active {
+  transform: translateY(2px);
 }
 
 a {
   color: var(--color-primario);
   text-decoration: none;
+  font-weight: bold;
 }
 
 a:hover {
-  text-decoration: underline;
+  opacity: 0.85;
 }
 
 ul,
