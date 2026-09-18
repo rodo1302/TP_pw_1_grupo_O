@@ -1,0 +1,403 @@
+/* ==========================================================================
+   Navegación / Header Fijo
+   ========================================================================== */
+
+.navegacion {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--color-superficie);
+  border-bottom: 2px solid var(--color-borde);
+  padding: 10px 24px;
+}
+
+.contenedor-nav {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+/* Identidad Visual (Logo + Nombre) */
+.logo-marca {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.img-logo {
+  width: 38px;
+  height: 42px;
+  object-fit: contain;
+}
+
+.nombre-brand {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--color-primario);
+  letter-spacing: -0.5px;
+}
+
+/* Grupo de Enlaces */
+.menu-enlaces {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-nav {
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--color-texto);
+  background-color: var(--color-superficie);
+  border: 2px solid var(--color-borde);
+  border-bottom: 4px solid var(--color-borde-inferior);
+  border-radius: var(--radius-boton);
+  transition:
+    transform 0.1s ease,
+    border-color 0.1s ease,
+    background-color 0.1s ease;
+}
+
+.btn-nav:hover {
+  background-color: var(--color-bg);
+  border-color: #d6d6d6;
+}
+
+.btn-nav:active {
+  transform: translateY(2px);
+  border-bottom-width: 2px;
+}
+
+/* Estado Activo para el botón seleccionado */
+.btn-nav.activo {
+  color: #ffffff;
+  background-color: var(--color-primario);
+  border-color: var(--color-primario-sombra);
+  border-bottom-color: var(--color-primario-sombra);
+}
+
+.btn-nav.activo:hover {
+  opacity: 0.95;
+}
+
+/* Bloque de Racha y Experiencia */
+.indicadores-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--color-bg);
+  padding: 6px 14px;
+  border: 2px solid var(--color-borde);
+  border-radius: var(--radius-boton);
+  font-size: 0.9rem;
+}
+
+.stat-item strong {
+  color: var(--color-texto);
+}
+
+.stat-item.racha strong {
+  color: var(--color-acento); /* Naranja / Fuego */
+}
+
+.stat-item.xp strong {
+  color: var(--color-resalte-sombra); /* Amarillo / Rayo */
+}
+
+.separador {
+  color: var(--color-texto-grisado);
+  font-weight: 300;
+}
+
+/* ==========================================================================
+   Adaptación Mobile (Pantallas de menos de 768px)
+   ========================================================================== */
+@media (max-width: 768px) {
+  /* El header superior solo mantiene el Logo y los Indicadores */
+  .contenedor-nav {
+    padding: 4px 0;
+  }
+
+  .nombre-brand {
+    font-size: 1.1rem; /* Logo más compacto */
+  }
+
+  /* Transformamos el menú de enlaces en una Bottom Navigation Bar (Barra inferior) */
+  .menu-enlaces {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    background-color: var(--color-superficie);
+    border-top: 2px solid var(--color-borde);
+    padding: 8px 12px;
+  }
+
+  /* Ajuste de los botones para estilo App Móvil */
+  .btn-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    padding: 6px 12px;
+    font-size: 0.7rem;
+  }
+
+  .nav-icono {
+    display: block;
+    font-size: 1.2rem;
+  }
+
+  .btn-nav.activo .nav-icono {
+    transform: scale(1.15); /* Resalta el icono seleccionado */
+  }
+
+  /* Compensación de espacio en el body para que la barra inferior no tape el footer */
+  body {
+    padding-bottom: 60px;
+  }
+}
+
+/* ==========================================================================
+   Layout Principal del Dashboard (Grilla de 2 columnas)
+   ========================================================================== */
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboard-layout {
+  max-width: 1100px;
+  width: 100%;
+  flex: 1;
+  margin: 0 auto;
+  padding: 32px 24px;
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 32px;
+}
+
+.seccion-cursos h2,
+.tarjeta-resumen h2 {
+  font-size: 1.3rem;
+  color: var(--color-texto);
+  margin-bottom: 20px;
+}
+
+/* Grilla interna de Tarjetas de Cursos */
+.contenedor-tarjetas {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+/* Enlace envolvente */
+.enlace-tarjeta {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+/* Tarjeta de Curso con relieve 3D */
+.tarjeta-curso {
+  background-color: var(--color-superficie);
+  border: 2px solid var(--color-borde);
+  border-bottom: 5px solid var(--color-borde-inferior);
+  border-radius: var(--radius-tarjeta);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+  cursor: pointer;
+  transition:
+    transform 0.1s ease,
+    border-color 0.1s ease,
+    background-color 0.1s ease;
+}
+
+.enlace-tarjeta:hover .tarjeta-curso {
+  border-color: var(--color-primario);
+  background-color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.enlace-tarjeta:active .tarjeta-curso {
+  transform: translateY(2px);
+  border-bottom-width: 2px;
+}
+
+.img-bandera {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+}
+
+.info-curso h3 {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--color-texto);
+  margin-bottom: 6px;
+}
+
+.info-curso p {
+  font-size: 0.85rem;
+  color: var(--color-texto-grisado);
+  margin-top: 2px;
+}
+
+.info-curso p strong {
+  color: var(--color-texto);
+}
+
+/* Ocación por defecto del icono en escritorio (Oculto si preferís solo texto) */
+.nav-icono {
+  display: none;
+}
+
+/* ==========================================================================
+   Panel Lateral (Aside)
+   ========================================================================== */
+
+.panel-lateral {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: 100%;
+}
+
+.tarjeta-resumen {
+  background-color: var(--color-superficie);
+  border: 2px solid var(--color-borde);
+  border-bottom: 4px solid var(--color-borde-inferior);
+  border-radius: var(--radius-tarjeta);
+  padding: 20px;
+  height: 100%;
+  text-align: center;
+}
+
+.item-estadistica {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 16px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--color-borde);
+}
+
+.item-estadistica:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.img-icono-aside {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.subtitulo {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: var(--color-texto-grisado);
+}
+
+.valor-destacado {
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--color-primario);
+  margin-top: 2px;
+}
+
+/* Adaptabilidad para móviles */
+@media (max-width: 768px) {
+  .dashboard-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
+   Footer Principal
+   ========================================================================== */
+
+.footer-principal {
+  background-color: var(--color-superficie);
+  border-top: 2px solid var(--color-borde);
+  padding: 16px 20px;
+
+  /* Flexbox directo en la etiqueta <footer> */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  max-width: 100%;
+}
+
+/* Marca */
+.marca-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.logo-footer {
+  font-size: 1.25rem;
+  color: var(--color-primario);
+}
+
+.marca-footer span {
+  font-size: 0.85rem;
+  color: var(--color-texto-grisado);
+}
+
+/* Navegación */
+.links-footer {
+  display: flex;
+  gap: 16px;
+}
+
+.links-footer a {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: var(--color-texto-grisado);
+  transition: color 0.15s ease;
+}
+
+.links-footer a:hover {
+  color: var(--color-primario);
+}
+
+/* Copyright (Ocupa todo el ancho abajo) */
+.copyright-footer {
+  flex-basis: 100%;
+  text-align: center;
+  padding-top: 8px;
+  border-top: 1px solid var(--color-borde);
+  color: var(--color-texto-grisado);
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .footer-principal {
+    flex-direction: column;
+    text-align: center;
+  }
+}
