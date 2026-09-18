@@ -1,0 +1,96 @@
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: var(--color-bg);
+}
+
+.header {
+    height: 30vh;
+    background-color: var(--color-primario);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.titulo {
+    text-align: center;
+    font-size: 2em;
+    width: 90%;
+    padding: 6vh;
+    border-bottom: .13em solid var(--color-texto);
+
+    a {
+        color: var(--color-texto);
+    }
+
+    a:hover {
+        text-decoration: none;
+    }
+}
+
+.subtitulo {
+    font-size: 1.2em;
+    font-style: italic;
+    padding-top: 1vh;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.registrar-form {
+    width: 50%;
+    margin: auto;
+    display: flex;
+    gap: 4vh;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid var(--color-borde);
+    background-color: var(--color-superficie);
+    padding: 5vh;
+}
+
+.registrar-input_container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 1vh;
+
+    input {
+        border: .1em solid var(--color-acento);
+        border-radius: .2em;
+    }
+
+    input:focus {
+        outline-style: solid;
+        outline-color: var(--color-acento);
+        outline-width: .1em;
+    }
+}
+
+
+.usuario_registrado-container{
+    width: 50%;
+    margin: auto;
+    border: 1px solid var(--color-borde);
+    background-color: var(--color-superficie);
+    padding: 5vh;
+}
+
+.registrar-boton_iniciar {
+    width: 35%;
+    margin: auto;
+    padding: 1vh;
+    font-size: 1em;
+    color: var(--color-superficie);
+    background-color: var(--color-secundario);
+    border: .2em solid var(--color-resalte);
+    border-radius: .5em;
+}
+
+.registrar-link,.usuario_registrado-link {
+    text-align: center;
+}
