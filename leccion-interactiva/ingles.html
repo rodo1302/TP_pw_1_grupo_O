@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../dashboard/dashboard.css">
+  <link rel="stylesheet" href="leccion-interactiva.css">
+
+  <title>Grupo O</title>
+</head>
+
+<body>
+  <main class="contenedor-principal">
+    <section class="barra-superior navegacion">
+      <nav class="contenedor-nav">
+        <a href="#dashboard" class="logo-marca">
+          <img src="../img/logo-lingo.svg" alt="Lingo Panda" class="img-logo">
+          <span class="nombre-brand">LingoPanda</span>
+        </a>
+        <div class="menu-enlace">
+          <a href="../dashboard/dashboard.html" class="btn-salir">X</a>
+          <label for="progreso"><strong>Progreso: </strong></label>
+          <progress id="progreso" max="100" value="45">45%</progress>
+          <span><strong>45%</strong></span>
+        </div>
+
+        <div class="indicadores-header">
+          <p class="stat-item racha">❤️❤️❤️ <strong> Vidas: 3</strong></p>
+        </div>
+      </nav>
+    </section>
+    <section class="leccion">
+      <article class="leccion-oracion">
+        <h3>Traduce la oración:</h3>
+        <p>"He stopped smoking last year"</p>
+      </article>
+      <article class="leccion-respuesta">
+        <h3>Arma la oracion:</h3>
+
+        <input type="checkbox" id="p-el" class="chk-p chk-correcta">
+        <label for="p-el" class="btn">Él</label>
+
+        <input type="checkbox" id="p-dejo" class="chk-p chk-correcta">
+        <label for="p-dejo" class="btn">dejó</label>
+
+        <input type="checkbox" id="p-ano" class="chk-p chk-correcta">
+        <label for="p-ano" class="btn">año</label>
+
+        <input type="checkbox" id="p-paro" class="chk-p">
+        <label for="p-paro" class="btn">paró</label>
+
+        <input type="checkbox" id="p-de" class="chk-p chk-correcta">
+        <label for="p-de" class="btn">de</label>
+
+        <input type="checkbox" id="p-fumar" class="chk-p chk-correcta">
+        <label for="p-fumar" class="btn">fumar</label>
+
+        <input type="checkbox" id="p-fuma" class="chk-p">
+        <label for="p-fuma" class="btn">fuma</label>
+
+        <input type="checkbox" id="p-el2" class="chk-p chk-correcta">
+        <label for="p-el2" class="btn">el</label>
+
+        <input type="checkbox" id="p-proximo" class="chk-p">
+        <label for="p-proximo" class="btn">próximo</label>
+
+        <input type="checkbox" id="p-pasado" class="chk-p chk-correcta">
+        <label for="p-pasado" class="btn">pasado</label>
+
+
+    </section>
+
+    <dialog id="modal-respuesta" class="modal-dialog">
+      <div class="msj-respuesta">
+        <p>Respuesta incorrecta. Vuelve a intentarlo.</p>
+        <button commandfor="modal-respuesta" command="close" class="btn">Intentar de nuevo</button>
+      </div>
+    </dialog>
+
+    <!-- <dialog id="modal-respuesta" class="modal-dialog">
+      <div class="msj-respuesta">
+        <h3>¡Excelente!</h3>
+        <p>Traducción correcta.</p>
+        <button commandfor="modal-respuesta" command="close" class="btn btn-exito-accion">
+          Continuar
+        </button>
+      </div>
+    </dialog> -->
+
+
+    <section class="barra-inferior">
+      <button commandfor="modal-respuesta" command="show-modal" class="btn-comprobar">
+        Comprobar Respuesta
+      </button>
+    </section>
+
+  </main>
+</body>
+
+</html>
