@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../dashboard/dashboard.css">
+  <link rel="stylesheet" href="leccion-interactiva.css">
+
+  <title>Grupo O</title>
+</head>
+
+<body>
+  <main class="contenedor-principal">
+    <section class="barra-superior navegacion">
+      <nav class="contenedor-nav">
+        <a href="#dashboard" class="logo-marca">
+          <img src="../img/logo-lingo.svg" alt="Lingo Panda" class="img-logo">
+          <span class="nombre-brand">LingoPanda</span>
+        </a>
+        <div class="menu-enlace">
+          <a href="../dashboard/dashboard.html" class="btn-salir">X</a>
+          <label for="progreso"><strong>Progreso: </strong></label>
+          <progress id="progreso" max="100" value="12">12%</progress>
+          <span><strong>12%</strong></span>
+        </div>
+
+        <div class="indicadores-header">
+          <p class="stat-item racha">❤️❤️❤️ <strong> Vidas: 3</strong></p>
+        </div>
+      </nav>
+    </section>
+    <section class="leccion">
+      <article class="leccion-oracion">
+        <h3>Traduce la oración:</h3>
+        <p>"Ich trinke gerne Kaffee"</p>
+      </article>
+      <article class="leccion-respuesta">
+        <h3>Arma la oracion:</h3>
+
+
+        <input type="checkbox" id="p-yo" class="chk-p chk-correcta">
+        <label for="p-yo" class="btn">Yo</label>
+
+        <input type="checkbox" id="p-tomo" class="chk-p chk-correcta">
+        <label for="p-tomo" class="btn">tomo</label>
+
+        <input type="checkbox" id="p-cafe" class="chk-p chk-correcta">
+        <label for="p-cafe" class="btn">café</label>
+
+        <input type="checkbox" id="p-ella" class="chk-p">
+        <label for="p-ella" class="btn">Ella</label>
+
+        <input type="checkbox" id="p-agua" class="chk-p">
+        <label for="p-agua" class="btn">agua</label>
+
+        <input type="checkbox" id="p-con" class="chk-p chk-correcta">
+        <label for="p-con" class="btn">con</label>
+
+        <input type="checkbox" id="p-gusto" class="chk-p chk-correcta">
+        <label for="p-gusto" class="btn">gusto</label>
+
+        <input type="checkbox" id="p-comida" class="chk-p">
+        <label for="p-comida" class="btn">comida</label>
+
+    </section>
+
+    <!-- <dialog id="modal-respuesta" class="modal-dialog">
+      <div class="msj-respuesta">
+        <p>Respuesta incorrecta. Vuelve a intentarlo.</p>
+        <button commandfor="modal-respuesta" command="close" class="btn">Intentar de nuevo</button>
+      </div>
+    </dialog> -->
+
+    <dialog id="modal-respuesta" class="modal-dialog">
+      <div class="msj-respuesta">
+        <h3>¡Excelente!</h3>
+        <p>Traducción correcta.</p>
+        <button commandfor="modal-respuesta" command="close" class="btn btn-exito-accion">
+          Continuar
+        </button>
+      </div>
+    </dialog>
+
+
+    <section class="barra-inferior">
+      <button commandfor="modal-respuesta" command="show-modal" class="btn-comprobar">
+        Comprobar Respuesta
+      </button>
+    </section>
+
+  </main>
+</body>
+
+</html>

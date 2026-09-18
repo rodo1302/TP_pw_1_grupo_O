@@ -35,7 +35,7 @@
 }
 
 .nombre-brand {
-  font-size: 1.35rem;
+  font-size: 1.35em;
   font-weight: 800;
   color: var(--color-primario);
   letter-spacing: -0.5px;
@@ -50,7 +50,7 @@
 
 .btn-nav {
   padding: 8px 16px;
-  font-size: 0.9rem;
+  font-size: 0.9em;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -96,7 +96,7 @@
   padding: 6px 14px;
   border: 2px solid var(--color-borde);
   border-radius: var(--radius-boton);
-  font-size: 0.9rem;
+  font-size: 0.9em;
 }
 
 .stat-item strong {
@@ -120,14 +120,14 @@
    Adaptación Mobile (Pantallas de menos de 768px)
    ========================================================================== */
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   /* El header superior solo mantiene el Logo y los Indicadores */
   .contenedor-nav {
     padding: 4px 0;
   }
 
   .nombre-brand {
-    font-size: 1.1rem; /* Logo más compacto */
+    font-size: 1.1em; /* Logo más compacto */
   }
 
   /* Transformamos el menú a Barra inferior */
@@ -154,12 +154,12 @@
     align-items: center;
     gap: 2px;
     padding: 6px 12px;
-    font-size: 0.7rem;
+    font-size: 0.7em;
   }
 
   .nav-icono {
     display: block;
-    font-size: 1.2rem;
+    font-size: 1.2em;
   }
 
   .btn-nav.activo .nav-icono {
@@ -193,7 +193,7 @@ body {
 
 .seccion-cursos h2,
 .tarjeta-resumen h2 {
-  font-size: 1.3rem;
+  font-size: 1.3em;
   color: var(--color-texto);
   margin-bottom: 20px;
 }
@@ -249,14 +249,14 @@ body {
 }
 
 .info-curso h3 {
-  font-size: 1.1rem;
+  font-size: 1.1em;
   font-weight: 800;
   color: var(--color-texto);
   margin-bottom: 6px;
 }
 
 .info-curso p {
-  font-size: 0.85rem;
+  font-size: 0.85em;
   color: var(--color-texto-grisado);
   margin-top: 2px;
 }
@@ -312,21 +312,21 @@ body {
 }
 
 .subtitulo {
-  font-size: 0.75rem;
+  font-size: 0.75em;
   text-transform: uppercase;
   font-weight: bold;
   color: var(--color-texto-grisado);
 }
 
 .valor-destacado {
-  font-size: 1rem;
+  font-size: 1em;
   font-weight: 800;
   color: var(--color-primario);
   margin-top: 2px;
 }
 
 /* Adaptabilidad para móviles */
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .dashboard-layout {
     grid-template-columns: 1fr;
   }
@@ -358,12 +358,12 @@ body {
 }
 
 .logo-footer {
-  font-size: 1.25rem;
+  font-size: 1.25em;
   color: var(--color-primario);
 }
 
 .marca-footer span {
-  font-size: 0.85rem;
+  font-size: 0.85em;
   color: var(--color-texto-grisado);
 }
 
@@ -374,7 +374,7 @@ body {
 }
 
 .links-footer a {
-  font-size: 0.9rem;
+  font-size: 0.9em;
   font-weight: bold;
   color: var(--color-texto-grisado);
   transition: color 0.15s ease;
@@ -391,12 +391,12 @@ body {
   padding-top: 8px;
   border-top: 1px solid var(--color-borde);
   color: var(--color-texto-grisado);
-  font-size: 0.8rem;
+  font-size: 0.8em;
   font-weight: 500;
 }
 
 /* Responsivo */
-@media (max-width: 600px) {
+@media screen and (max-width: 600px) {
   .footer-principal {
     flex-direction: column;
     text-align: center;
