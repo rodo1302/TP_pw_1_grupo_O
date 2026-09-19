@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="./perfil.css">
+    <title>Grupo O</title>
+</head>
+
+<body>
+    <header class="navegacion">
+        <nav class="contenedor-nav">
+            <a href="/dashboard/dashboard.html" class="logo-marca">
+                <img src="../img/logo-lingo.svg" alt="Lingo Panda" class="img-logo">
+                <span class="nombre-brand">LingoPanda</span>
+            </a>
+
+            <div class="menu-enlaces">
+                <a href="/dashboard/dashboard.html" class="btn-nav">Curso</a>
+                <a href="#" class="btn-nav activo">Perfil</a>
+                <a href="#" class="btn-nav">Clasificación</a>
+            </div>
+
+            <div class="indicadores-header">
+                <p class="stat-item racha">🔥 <strong>5 dias</strong>
+                    <span class="separador">|</span>
+                <p class="stat-item xp">⚡ <strong>350 XP</strong></p>
+            </div>
+        </nav>
+    </header>
+    <main class="contenedor-perfil">
+        <aside class="tarjeta">
+            <h2 class="titulo-seccion">Mi Perfil</h2>
+            <img src="" class="imagen-perfil" alt="Mi imagen de perfil">
+            <p class="nombre-perfil">Juan Pérez
+                <span class="usuario-perfil">@juanperez_web</span>
+            </p>
+            <p>📅 Miembro desde Marzo de 2025</p>
+            <p>🏆 Nivel 4 - Aprendiz</p>
+        </aside>
+        <section class="config-cuenta">
+            <h2 class="titulo-seccion">Configuración de cuenta</h2>
+            <form action="">
+                <input type="email" name="email" id="email" disabled value="juan.perez@alumnos.unlam.edu.ar">
+                <div class="contrasenia">
+                    <input type="password" name="password" id="password" value="lacontraseñanoseve" disabled>
+                    <button class="btn-contrasenia">🔑 Cambiar Contraseña</button>
+                </div>
+                <select name="idioma" id="idioma">
+                    <option value="al">Alemán</option>
+                    <option value="ch">Chino</option>
+                    <option value="es" selected>Español</option>
+                    <option value="en">Inglés</option>
+                </select>
+                <div class="btn-form">
+                    <a href="/index.html" class="btn-salir">🚪 Cerrar Sesión</a>
+                    <button commandfor="modal-guardar" command="show-modal" class="btn-guardar">Guardar Cambios</button>
+                </div>
+            </form>
+        </section>
+
+        <dialog id="modal-guardar" class="modal-dialog">
+            <div class="msj-guardar">
+                <h3>Guardar</h3>
+                <p>Tus cambios se guardaron</p>
+                <button commandfor="modal-guardar" command="close" class="btn btn-exito-accion">Continuar</button>
+            </div>
+        </dialog>
+    </main>
+
+</body>
+
+</html>
