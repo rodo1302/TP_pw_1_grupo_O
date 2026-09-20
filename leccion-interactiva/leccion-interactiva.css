@@ -1,5 +1,5 @@
 /* barra navegacion */
-.menu-enlace {
+.progreso-bar {
   display: flex;
   align-items: center;
   gap: 20px;
@@ -58,11 +58,16 @@ label,
 }
 
 /* section principal*/
-body,
-.contenedor-principal {
+body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+}
+
+.contenedor-principal {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .leccion {
