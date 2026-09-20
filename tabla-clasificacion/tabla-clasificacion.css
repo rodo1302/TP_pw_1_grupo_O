@@ -166,6 +166,7 @@
 body {
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .contendeor-principal {
