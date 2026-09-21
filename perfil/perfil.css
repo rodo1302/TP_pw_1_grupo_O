@@ -1,3 +1,7 @@
+body{
+    display: flex;
+    flex-direction: column;
+}
 .navegacion {
     position: sticky;
     top: 0;
@@ -172,13 +176,12 @@
 
 /* Contenedor perfil */
 .contenedor-perfil {
+    flex: 1;
     display: grid;
     grid-template-columns: 300px 1fr;
     width: 90%;
     gap: 2vh;
-    margin: auto;
-    margin-top: 2vh;
-    min-height: 85vh;
+    margin: 2vh auto;
     background-color: var(--color-bg);
 }
 
@@ -377,6 +380,7 @@
     }
 
     .titulo-seccion {
+        margin-bottom: 0;
         grid-area: t;
     }
 
@@ -430,5 +434,76 @@
 
     .contrasenia-input {
         grid-template-columns: 1fr;
+    }
+}
+
+/* ==========================================================================
+   Footer Principal
+   ========================================================================== */
+
+.footer-principal {
+    background-color: var(--color-superficie);
+    border-top: 2px solid var(--color-borde);
+    padding: 16px 20px;
+
+    /* Flexbox directo en la etiqueta <footer> */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    max-width: 100%;
+}
+
+/* Marca */
+.marca-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.logo-footer {
+    font-size: 1.25em;
+    color: var(--color-primario);
+}
+
+.marca-footer span {
+    font-size: 0.85em;
+    color: var(--color-texto-grisado);
+}
+
+/* Navegación */
+.links-footer {
+    display: flex;
+    gap: 16px;
+}
+
+.links-footer a {
+    font-size: 0.9em;
+    font-weight: bold;
+    color: var(--color-texto-grisado);
+    transition: color 0.15s ease;
+}
+
+.links-footer a:hover {
+    color: var(--color-primario);
+}
+
+/* Copyright (Ocupa todo el ancho abajo) */
+.copyright-footer {
+    flex-basis: 100%;
+    text-align: center;
+    padding-top: 8px;
+    border-top: 1px solid var(--color-borde);
+    color: var(--color-texto-grisado);
+    font-size: 0.8em;
+    font-weight: 500;
+}
+
+/* Responsivo */
+@media screen and (max-width: 600px) {
+    .footer-principal {
+        flex-direction: column;
+        text-align: center;
     }
 }

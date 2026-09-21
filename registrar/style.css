@@ -155,6 +155,19 @@ main {
   text-align: center;
 }
 
+.footer {
+  margin-top: auto;
+  border-top: 2px solid var(--color-borde);
+  padding: 16px;
+  text-align: center;
+  background-color: var(--color-superficie);
+}
+
+.footer small {
+  color: var(--color-texto-grisado);
+  font-size: 0.8rem;
+}
+
 @media (max-width: 768px) {
   .descripcion-brand{
     display: none;

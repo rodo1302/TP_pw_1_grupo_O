@@ -19,8 +19,8 @@
 
             <div class="menu-enlaces">
                 <a href="/dashboard/dashboard.html" class="btn-nav">Curso</a>
-                <a href="#" class="btn-nav activo">Perfil</a>
-                <a href="#" class="btn-nav">Clasificación</a>
+                <a href="./index.html" class="btn-nav activo">Perfil</a>
+                <a href="/tabla-clasificacion/tabla-clasificacion.html" class="btn-nav">Clasificación</a>
             </div>
 
             <div class="indicadores-header">
@@ -71,15 +71,29 @@
                 </div>
             </form>
         </section>
-
     </main>
+    <footer class="footer-principal">
+    <p class="marca-footer">
+      <strong class="logo-footer">🐼 LingoPanda</strong>
+      <span>Aprender idiomas nunca fue tan divertido.</span>
+    </p>
+    <nav class="links-footer">
+      <!-- <a href="#terminos">Términos</a>
+      <a href="#privacidad">Privacidad</a> -->
+      <a href="../contacto/contacto.html">Contactanos</a>
+    </nav>
+    <small class="copyright-footer">&copy; 2026 LingoPanda. Todos los derechos reservados.</small>
+  </footer>
+
+    <!-- modals -->
+    <!-- modal cambios guardados-->
     <dialog id="modal-guardar" class="modal-dialog" closedby="any">
         <div class="msj-guardar">
             <p>Se guardaron los cambios</p>
             <button commandfor="modal-guardar" command="close" class="btn-exito">✓</button>
         </div>
     </dialog>
-
+    <!-- modal cambiar contraseña-->
     <dialog id="modal-contrasenia" class="modal-dialog" closedby="any">
         <form command="close" commandfor="modal-contrasenia" class="form-contrasenia">
             <label for="cambioPwd">Ingresa la nueva contraseña</label>
