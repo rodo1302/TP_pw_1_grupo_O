@@ -166,23 +166,23 @@
 body {
   display: flex;
   flex-direction: column;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .contendeor-principal {
   display: flex;
   flex: 1;
   flex-direction: column;
-  gap: 1em;
   align-items: center;
   justify-content: center;
   width: 100%;
+  margin: 0 auto;
 }
 
 .liga-actual {
   display: flex;
   justify-content: center;
-  gap: 1em;
+  gap: 0.8em;
   align-items: center;
   flex-direction: column;
   width: 100%;
@@ -192,6 +192,7 @@ body {
 
 .liga-actual p {
   font-style: italic;
+  padding-bottom: 0.5em;
 }
 
 .titulo {
@@ -206,7 +207,6 @@ body {
   border-top: 2px solid var(--color-primario);
   border-bottom: 2px solid var(--color-primario);
   width: 100%;
-  margin: 0;
 }
 
 .subtitulo {
