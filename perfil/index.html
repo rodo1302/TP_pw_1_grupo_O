@@ -33,42 +33,60 @@
     <main class="contenedor-perfil">
         <aside class="tarjeta">
             <h2 class="titulo-seccion">Mi Perfil</h2>
-            <img src="" class="imagen-perfil" alt="Mi imagen de perfil">
+            <img src="/img/logo-lingo.svg" class="imagen-perfil" alt="Mi imagen de perfil">
             <p class="nombre-perfil">Juan Pérez
                 <span class="usuario-perfil">@juanperez_web</span>
             </p>
-            <p>📅 Miembro desde Marzo de 2025</p>
-            <p>🏆 Nivel 4 - Aprendiz</p>
+            <p class="tarjeta-badges antig">📅 Miembro desde Marzo de 2025</p>
+            <p class="tarjeta-badges nivel">🏆 Nivel 4 - Aprendiz</p>
         </aside>
         <section class="config-cuenta">
             <h2 class="titulo-seccion">Configuración de cuenta</h2>
-            <form action="">
-                <input type="email" name="email" id="email" disabled value="juan.perez@alumnos.unlam.edu.ar">
-                <div class="contrasenia">
-                    <input type="password" name="password" id="password" value="lacontraseñanoseve" disabled>
-                    <button class="btn-contrasenia">🔑 Cambiar Contraseña</button>
+            <form class="form-perfil" action="">
+                <div>
+                    <label for="email">📧 Email Registrado</label>
+                    <input type="email" name="email" id="email" value="juan.perez@alumnos.unlam.edu.ar">
                 </div>
-                <select name="idioma" id="idioma">
-                    <option value="al">Alemán</option>
-                    <option value="ch">Chino</option>
-                    <option value="es" selected>Español</option>
-                    <option value="en">Inglés</option>
-                </select>
-                <div class="btn-form">
-                    <a href="/index.html" class="btn-salir">🚪 Cerrar Sesión</a>
-                    <button commandfor="modal-guardar" command="show-modal" class="btn-guardar">Guardar Cambios</button>
+                <div class="contrasenia">
+                    <label for="password">🔒 Contraseña</label>
+                    <div class="contrasenia-input">
+                        <input type="password" name="password" id="password" value="lacontraseñanoseve" disabled>
+                        <button type="button" commandfor="modal-contrasenia" command="show-modal"
+                            class="btn-contrasenia">🔑 Cambiar Contraseña</button>
+                    </div>
+                </div>
+                <div>
+                    <label for="idioma">🌐 Idioma de la Interfaz</label>
+                    <select name="idioma" id="idioma">
+                        <option value="al">Alemán</option>
+                        <option value="ch">Chino</option>
+                        <option value="es" selected>Español</option>
+                        <option value="en">Inglés</option>
+                    </select>
+                </div>
+                <div class="btn-wrapper-form">
+                    <a href="/index.html" type="button" class="btn-salir">Cerrar Sesión</a>
+                    <button type="button" commandfor="modal-guardar" command="show-modal" class="btn-guardar">Guardar
+                        Cambios</button>
                 </div>
             </form>
         </section>
 
-        <dialog id="modal-guardar" class="modal-dialog">
-            <div class="msj-guardar">
-                <h3>Guardar</h3>
-                <p>Tus cambios se guardaron</p>
-                <button commandfor="modal-guardar" command="close" class="btn btn-exito-accion">Continuar</button>
-            </div>
-        </dialog>
     </main>
+    <dialog id="modal-guardar" class="modal-dialog" closedby="any">
+        <div class="msj-guardar">
+            <p>Se guardaron los cambios</p>
+            <button commandfor="modal-guardar" command="close" class="btn-exito">✓</button>
+        </div>
+    </dialog>
+
+    <dialog id="modal-contrasenia" class="modal-dialog" closedby="any">
+        <form command="close" commandfor="modal-contrasenia" class="form-contrasenia">
+            <label for="cambioPwd">Ingresa la nueva contraseña</label>
+            <input id="cambioPwd" type="password" required>
+            <button type="submit" class="btn-contrasenia">Confirmar nueva contraseña</button>
+        </form>
+    </dialog>
 
 </body>
 

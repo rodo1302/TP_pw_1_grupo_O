@@ -170,62 +170,265 @@
     }
 }
 
+/* Contenedor perfil */
+.contenedor-perfil {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    width: 90%;
+    gap: 2vh;
+    margin: auto;
+    margin-top: 2vh;
+    min-height: 85vh;
+    background-color: var(--color-bg);
+}
+
+.titulo-seccion {
+    margin-bottom: 2vh;
+}
+
+.contenedor-perfil>aside,
+.contenedor-perfil>section {
+    padding: 4vh;
+}
+
+/* Estilos tarjeta perfil */
+
+.tarjeta {
+    display: flex;
+    flex-direction: column;
+    gap: 4vh;
+    /* justify-content: space-between; */
+    align-items: center;
+    background-color: var(--color-superficie);
+    text-align: center;
+    border: 2px solid var(--color-borde);
+    border-radius: var(--radius-boton);
+}
+
+.tarjeta-badges {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1vh;
+    border: 2px solid var(--color-primario);
+    border-radius: var(--radius-boton);
+    width: 100%;
+}
+
+.imagen-perfil {
+    width: 15vh;
+}
+
+.nombre-perfil {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.usuario-perfil {
+    font-style: italic;
+    font-size: .8em;
+    color: var(--color-texto-grisado);
+}
+
 /* Estilos Configuracion cuenta */
+.config-cuenta {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    width: 100%;
+}
 
+.config-cuenta label {
+    display: block;
+    margin-bottom: 2vh;
+}
 
-/*EXPORT DE LECCION-INTERACTIVA WIP*/
+.form-perfil {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2vh;
+}
+
+.form-perfil select,
+.form-perfil input[type="email"],
+.contrasenia-input input,
+.modal-dialog input {
+    width: 100%;
+    padding: 10px 14px;
+    font-family: var(--fuente-base);
+    font-size: 0.95rem;
+    color: var(--color-texto);
+    background-color: var(--color-bg);
+    border: 2px solid var(--color-borde);
+    border-radius: var(--radius-boton);
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.contrasenia-input {
+    display: grid;
+    gap: 6%;
+    grid-template-columns: repeat(auto-fill, 47%);
+}
+
+.btn-contrasenia {
+    padding: 8px 16px;
+    font-size: 0.9em;
+    color: var(--color-texto);
+    background-color: var(--color-superficie);
+    border: 2px solid var(--color-borde);
+    border-bottom: 4px solid var(--color-borde-inferior);
+    border-radius: var(--radius-boton);
+}
+
+.btn-wrapper-form {
+    display: flex;
+    gap: 2vh;
+    justify-content: space-evenly;
+}
+
+.btn-guardar,
+.btn-salir,
+.btn-exito {
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--color-superficie);
+    background-color: var(--color-secundario);
+    border: none;
+    border-bottom: 4px solid var(--color-secundario-sombra);
+    border-radius: var(--radius-boton, 12px);
+    cursor: pointer;
+    text-align: center;
+    max-width: 175px;
+}
+
 .btn-salir {
-  background-color: var(--color-bg);
-  color: var(--color-texto);
-  border: 2px solid var(--color-acento-sombra);
-  border-bottom: 4px solid var(--color-acento-sombra);
-  border-radius: var(--radius-boton);
-  font-weight: bold;
-  font-size: 1rem;
-  text-decoration: none;
-  transition: all 0.2s ease;
+    background-color: var(--color-acento);
+    border-bottom: 4px solid var(--color-acento-sombra);
+    border-radius: var(--radius-boton);
 }
+
 .btn-salir:hover {
-  background-color: var(--color-acento);
-  border-color: var(--color-acento);
-  border-bottom-color: var(--color-acento-sombra);
+    opacity: 1;
 }
+
 .btn-salir:active {
-  transform: translateY(2px);
-  border-bottom-width: 2px;
+    transform: translateY(2px);
 }
 
-.btn-guardar {
-  padding: 12px;
-  font-size: 1rem;
-  font-weight: bold;
-  color: var(--color-superficie);
-  background-color: var(--color-secundario);
-  border: none;
-  border-bottom: 4px solid var(--color-secundario-sombra);
-  border-radius: var(--radius-boton, 12px);
-  cursor: pointer;
+.btn-exito {
+    padding: 0;
+    width: 4em;
+    height: 2em;
 }
 
-.modal-dialog {
-  border: none;
-  background: transparent;
-  padding: 0;
-  margin: auto;
-  max-width: 400px;
-  width: 90%;
+.modal-dialog[open] {
+    min-width: 300px;
+    width: 30%;
+    min-height: 30vh;
+    background-color: var(--color-superficie);
+    border: 1px solid var(--color-primario);
+    border-bottom: 3px solid var(--color-primario-sombra);
+    border-right: 3px solid var(--color-primario-sombra);
+    border-radius: var(--radius-tarjeta);
+    padding: 1.5vh;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
 }
 
 /* Efecto de fondo oscuro al abrir el modal */
 .modal-dialog::backdrop {
-  background-color: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
 }
 
 /* Visibilidad del mensaje dentro del dialog */
-.modal-dialog .msj-guardar {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  align-items: center;
+.modal-dialog .msj-guardar,
+.form-contrasenia {
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    align-items: center;
+}
+
+/* ==========================================================================
+   Adaptación Mobile del contenedor de perfil
+   ========================================================================== */
+@media screen and (width < 768px) {
+    .contenedor-perfil {
+        grid-template-columns: 1fr;
+    }
+
+    .tarjeta {
+        display: grid;
+        grid-template-areas:
+            "t t t t"
+            "imagen nombre antig nivel";
+    }
+
+    .titulo-seccion {
+        grid-area: t;
+    }
+
+    .imagen-perfil {
+        grid-area: imagen
+    }
+
+    .nombre-perfil {
+        grid-area: nombre;
+    }
+
+    .antig {
+        grid-area: antig;
+    }
+
+    .nivel {
+        grid-area: nivel;
+    }
+
+
+    .tarjeta>* {
+        height: 100%;
+    }
+
+}
+
+@media screen and (width < 600px) {
+    .tarjeta {
+        grid-template-areas: none;
+        grid-template-columns: 1fr;
+    }
+
+    .tarjeta>*{
+        grid-area: auto;
+    }
+
+    .imagen-perfil {
+        display: none;
+    }
+
+    .btn-wrapper-form {
+        flex-direction: column-reverse;
+        justify-content: space-evenly;
+        align-items: stretch;
+    }
+
+    .btn-guardar,
+    .btn-salir {
+        max-width: none;
+    }
+
+    .contrasenia-input {
+        grid-template-columns: 1fr;
+    }
 }
