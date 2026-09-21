@@ -187,10 +187,6 @@ body {
     width: 100%;
     flex: 1;
     margin: 0 auto;
-    /* padding: 32px 24px; */
-    /* display: grid;
-  grid-template-columns: 1fr 300px;
-  gap: 32px; */
 }
 
 .seccion-unidades {
