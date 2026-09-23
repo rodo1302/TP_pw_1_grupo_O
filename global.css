@@ -213,6 +213,14 @@ ol {
   font-weight: 300;
 }
 
+@media screen and (max-width: 768px) {
+  .encabezado {
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+  }
+}
+
 /* ==========================================================================
    Footer Principal
    ========================================================================== */
