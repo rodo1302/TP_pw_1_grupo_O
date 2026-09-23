@@ -4,32 +4,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../global.css">
   <link rel="stylesheet" href="unidades.css">
   <title>Grupo O</title>
 </head>
 
 <body>
 
-  <header class="navegacion">
+  <header class="encabezado">
+    <a href="/dashboard/dashboard.html" class="logo-marca">
+      <img src="../img/logo-lingo.svg" alt="Lingo Panda" class="img-logo">
+      <span class="nombre-brand">LingoPanda</span>
+    </a>
+
     <nav class="contenedor-nav">
-      <a href="/dashboard/dashboard.html" class="logo-marca">
-        <img src="../img/logo-lingo.svg" alt="Lingo Panda" class="img-logo">
-        <span class="nombre-brand">LingoPanda</span>
-      </a>
-
-      <div class="menu-enlaces">
-        <a href="/dashboard/dashboard.html" class="btn-nav activo">Curso</a>
-        <a href="/perfil/index.html" class="btn-nav">Perfil</a>
-        <a href="/tabla-clasificacion/tabla-clasificacion.html" class="btn-nav">Clasificación</a>
-      </div>
-
-      <div class="indicadores-header">
-        <p class="stat-item racha">🔥 <strong>5 dias</strong>
-          <span class="separador">|</span>
-        <p class="stat-item xp">⚡ <strong>350 XP</strong></p>
-      </div>
+      <ul class="menu-enlaces">
+        <li><a href="/dashboard/dashboard.html" class="btn btn-nav activo">Curso</a></li>
+        <li><a href="/perfil/index.html" class="btn btn-nav">Perfil</a></li>
+        <li><a href="/tabla-clasificacion/tabla-clasificacion.html" class="btn btn-nav">Clasificación</a></li>
+      </ul>
     </nav>
+
+    <aside class="indicadores-header">
+      <p class="stat-item racha">🔥 <strong>5 dias</strong>
+        <span class="separador">|</span>
+      <p class="stat-item xp">⚡ <strong>350 XP</strong></p>
+    </aside>
   </header>
   <main class="unidades-layout">
     <!-- Sección de unidades -->
@@ -88,7 +88,7 @@
           </div>
           <h3 class="unidad-titulo">Pedir en un Restaurante y Expresar Gustos</h3>
           <span class="unidad-estado-texto resaltado">En Curso</span>
-          <a href="../leccion-interactiva/ingles.html" class="boton-inicio">Iniciar</a>
+          <a href="../leccion-interactiva/ingles.html" class="btn boton-inicio">Iniciar</a>
         </div>
 
         <div class="tarjeta-unidad bloqueada">

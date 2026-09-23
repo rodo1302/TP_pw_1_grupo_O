@@ -4,15 +4,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../style.css">
-  <link rel="stylesheet" href="../index.css">
+  <link rel="stylesheet" href="../global.css">
   <link rel="stylesheet" href="contacto.css">
-  <link rel="stylesheet" href="../dashboard/dashboard.css">
   <title>Grupo O</title>
 </head>
 
 <body>
-  <header class="navegacion">
+  <header class="encabezado">
     <a href="#" class="logo-marca">
       <img src="../img/logo-lingo.svg" alt="Lingo Panda" class="img-logo">
       <span class="nombre-brand">LingoPanda</span>
@@ -20,9 +18,9 @@
 
     <nav class="nav-lista">
       <ul class="menu-enlaces">
-        <li><a href="../dashboard/dashboard.html" class="btn-nav">Curso</a></li>
-        <li><a href="/perfil/index.html" class="btn-nav">Perfil</a></li>
-        <li><a href="../tabla-clasificacion/tabla-clasificacion.html" class="btn-nav ">Clasificación</a></li>
+        <li><a href="../dashboard/dashboard.html" class="btn btn-nav">Curso</a></li>
+        <li><a href="/perfil/index.html" class="btn btn-nav">Perfil</a></li>
+        <li><a href="../tabla-clasificacion/tabla-clasificacion.html" class="btn btn-nav ">Clasificación</a></li>
       </ul>
     </nav>
 
@@ -46,8 +44,8 @@
         <textarea name="mensaje-texto" id="mensaje-texto" placeholder="Escriba su mensaje ..." required></textarea>
 
         <div class="botones">
-          <button type="submit" class="btn-enviar">Enviar</button>
-          <a href="../dashboard/dashboard.html" class="btn-cancelar">Cancelar</a>
+          <button type="submit" class="btn btn-verde btn-enviar">Enviar</button>
+          <a href="../dashboard/dashboard.html" class="btn btn-rojo btn-cancelar">Cancelar</a>
         </div>
       </form>
 
@@ -61,8 +59,8 @@
 
     </section>
   </main>
-  <footer class="footer">
-    <small>&copy; 2026 LingoPanda. Todos los derechos reservados.</small>
+  <footer class="footer-principal">
+    <small class="copyright-footer">&copy; 2026 LingoPanda. Todos los derechos reservados.</small>
   </footer>
 </body>
 
