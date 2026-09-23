@@ -4,22 +4,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../style.css">
-  <link rel="stylesheet" href="../dashboard/dashboard.css">
+  <link rel="stylesheet" href="../global.css">
   <link rel="stylesheet" href="leccion-interactiva.css">
 
   <title>Grupo O</title>
 </head>
 
 <body>
-  <header class="navegacion">
+  <header class="encabezado">
     <a href="/dashboard/dashboard.html" class="logo-marca">
       <img src="../img/logo-lingo.svg" alt="Lingo Panda" class="img-logo">
       <span class="nombre-brand">LingoPanda</span>
     </a>
     <nav class="contenedor-nav">
       <div class="progreso-bar">
-        <a href="../dashboard/dashboard.html" class="btn-salir">X</a>
+        <a href="../dashboard/dashboard.html" class="btn btn-rojo btn-salir">X</a>
         <label for="progreso"><strong>Progreso: </strong></label>
         <progress id="progreso" max="100" value="0">0%</progress>
         <span><strong>0%</strong></span>
@@ -40,28 +39,28 @@
         <h3>Arma la oracion:</h3>
 
         <input type="checkbox" id="p-yo" class="chk-p chk-correcta">
-        <label for="p-yo" class="btn">Yo</label>
+        <label for="p-yo" class="btn btn-chk">Yo</label>
 
         <input type="checkbox" id="p-quiero" class="chk-p chk-correcta">
-        <label for="p-quiero" class="btn">quiero</label>
+        <label for="p-quiero" class="btn btn-chk">quiero</label>
 
         <input type="checkbox" id="p-tomar" class="chk-p chk-correcta">
-        <label for="p-tomar" class="btn">tomar</label>
+        <label for="p-tomar" class="btn btn-chk">tomar</label>
 
         <input type="checkbox" id="p-te" class="chk-p chk-correcta">
-        <label for="p-te" class="btn">té</label>
+        <label for="p-te" class="btn btn-chk">té</label>
 
         <input type="checkbox" id="p-comer" class="chk-p">
-        <label for="p-comer" class="btn">comer</label>
+        <label for="p-comer" class="btn btn-chk">comer</label>
 
         <input type="checkbox" id="p-puedo" class="chk-p">
-        <label for="p-puedo" class="btn">puedo</label>
+        <label for="p-puedo" class="btn btn-chk">puedo</label>
 
         <input type="checkbox" id="p-agua" class="chk-p">
-        <label for="p-agua" class="btn">agua</label>
+        <label for="p-agua" class="btn btn-chk">agua</label>
 
         <input type="checkbox" id="p-el" class="chk-p">
-        <label for="p-el" class="btn">Él</label>
+        <label for="p-el" class="btn btn-chk">Él</label>
 
     </section>
 
@@ -84,7 +83,7 @@
 
 
     <section class="barra-inferior">
-      <button commandfor="modal-respuesta" command="show-modal" class="btn-comprobar">
+      <button commandfor="modal-respuesta" command="show-modal" class="btn btn-verde">
         Comprobar Respuesta
       </button>
     </section>

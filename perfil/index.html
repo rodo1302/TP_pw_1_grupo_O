@@ -4,31 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="../global.css">
     <link rel="stylesheet" href="./perfil.css">
     <title>Grupo O</title>
 </head>
 
 <body>
-    <header class="navegacion">
+    <header class="encabezado">
+        <a href="/dashboard/dashboard.html" class="logo-marca">
+            <img src="../img/logo-lingo.svg" alt="Lingo Panda" class="img-logo">
+            <span class="nombre-brand">LingoPanda</span>
+        </a>
+
         <nav class="contenedor-nav">
-            <a href="/dashboard/dashboard.html" class="logo-marca">
-                <img src="../img/logo-lingo.svg" alt="Lingo Panda" class="img-logo">
-                <span class="nombre-brand">LingoPanda</span>
-            </a>
-
-            <div class="menu-enlaces">
-                <a href="/dashboard/dashboard.html" class="btn-nav">Curso</a>
-                <a href="./index.html" class="btn-nav activo">Perfil</a>
-                <a href="/tabla-clasificacion/tabla-clasificacion.html" class="btn-nav">Clasificación</a>
-            </div>
-
-            <div class="indicadores-header">
-                <p class="stat-item racha">🔥 <strong>5 dias</strong>
-                    <span class="separador">|</span>
-                <p class="stat-item xp">⚡ <strong>350 XP</strong></p>
-            </div>
+            <ul class="menu-enlaces">
+                <li><a href="/dashboard/dashboard.html" class="btn btn-nav">Curso</a></li>
+                <li><a href="./index.html" class="btn btn-nav activo">Perfil</a></li>
+                <li><a href="/tabla-clasificacion/tabla-clasificacion.html" class="btn btn-nav">Clasificación</a></li>
+            </ul>
         </nav>
+
+        <aside class="indicadores-header">
+            <p class="stat-item racha">🔥 <strong>5 dias</strong>
+                <span class="separador">|</span>
+            <p class="stat-item xp">⚡ <strong>350 XP</strong></p>
+        </aside>
     </header>
     <main class="contenedor-perfil">
         <aside class="tarjeta">
@@ -52,7 +52,7 @@
                     <div class="contrasenia-input">
                         <input type="password" name="password" id="password" value="lacontraseñanoseve" disabled>
                         <button type="button" commandfor="modal-contrasenia" command="show-modal"
-                            class="btn-contrasenia">🔑 Cambiar Contraseña</button>
+                            class="btn btn-contrasenia">🔑 Cambiar Contraseña</button>
                     </div>
                 </div>
                 <div>
@@ -65,25 +65,23 @@
                     </select>
                 </div>
                 <div class="btn-wrapper-form">
-                    <a href="/index.html" type="button" class="btn-salir">Cerrar Sesión</a>
-                    <button type="button" commandfor="modal-guardar" command="show-modal" class="btn-guardar">Guardar
+                    <a href="/index.html" type="button" class="btn btn-rojo btn-salir">Cerrar Sesión</a>
+                    <button type="button" commandfor="modal-guardar" command="show-modal" class="btn btn-verde">Guardar
                         Cambios</button>
                 </div>
             </form>
         </section>
     </main>
     <footer class="footer-principal">
-    <p class="marca-footer">
-      <strong class="logo-footer">🐼 LingoPanda</strong>
-      <span>Aprender idiomas nunca fue tan divertido.</span>
-    </p>
-    <nav class="links-footer">
-      <!-- <a href="#terminos">Términos</a>
-      <a href="#privacidad">Privacidad</a> -->
-      <a href="../contacto/contacto.html">Contactanos</a>
-    </nav>
-    <small class="copyright-footer">&copy; 2026 LingoPanda. Todos los derechos reservados.</small>
-  </footer>
+        <p class="marca-footer">
+            <strong class="logo-footer">🐼 LingoPanda</strong>
+            <span>Aprender idiomas nunca fue tan divertido.</span>
+        </p>
+        <nav class="links-footer">
+            <a href="../contacto/contacto.html">Contactanos</a>
+        </nav>
+        <small class="copyright-footer">&copy; 2026 LingoPanda. Todos los derechos reservados.</small>
+    </footer>
 
     <!-- modals -->
     <!-- modal cambios guardados-->

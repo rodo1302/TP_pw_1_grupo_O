@@ -4,18 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../global.css">
     <link rel="stylesheet" href="style.css">
     <title>Iniciar sesión</title>
 </head>
 
 <body>
-    <header class="navegacion">
+    <header class="encabezado">
+        <a href="../index.html" class="logo-marca">
+            <img src="../img/logo-lingo.svg" alt="Lingo Panda" class="img-logo">
+            <span class="nombre-brand">LingoPanda</span>
+        </a>
         <nav class="contenedor-nav">
-            <a href="../index.html" class="logo-marca">
-                <img src="../img/logo-lingo.svg" alt="Lingo Panda" class="img-logo">
-                <span class="nombre-brand">LingoPanda</span>
-            </a>
             <span class="descripcion-brand">Aprende Inglés, Alemán y Chino gratis y de forma divertida</span>
         </nav>
     </header>
@@ -28,15 +28,15 @@
                 <label for="contrasenia">Contraseña</label>
                 <input type="password" name="contrasenia" id="contrasenia" required>
             </section>
-            <button class="login-boton_iniciar" type="submit">Iniciar sesión</button>
+            <button class="btn btn-verde" type="submit">Iniciar sesión</button>
             <section class="login-links">
                 <a href="../recuperar_contrasenia/index.html">¿Olvidaste tu contraseña?</a><span>|</span><a
                     href="../registrar/index.html">¿No tienes cuenta? Créala aquí</a>
             </section>
         </form>
     </main>
-    <footer class="footer">
-        <small>&copy; 2026 LingoPanda. Todos los derechos reservados.</small>
+    <footer class="footer-principal">
+        <small class="copyright-footer">&copy; 2026 LingoPanda. Todos los derechos reservados.</small>
     </footer>
 </body>
 

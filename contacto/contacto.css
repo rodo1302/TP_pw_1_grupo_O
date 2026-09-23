@@ -44,7 +44,7 @@
 
 .formulario input:focus,
 .formulario textarea:focus {
-  border-color: var(--color-primario);
+  border-color: var(--color-naranja-panda);
 }
 
 .formulario textarea {
@@ -61,39 +61,10 @@
   margin-top: 8px;
 }
 
-/* Estilos 3D de los botones */
-.btn-enviar {
-  padding: 10px 24px;
-  background-color: var(--color-secundario);
-  color: #ffffff;
-  border-bottom: 4px solid var(--color-secundario-sombra);
-  border-radius: var(--radius-boton);
-  font-size: 0.95em;
-}
-
-.btn-enviar:hover {
-  background-color: var(--color-naranja-panda);
-  border-color: var(--color-naranja-oscuro);
-  border-bottom: 4px solid var(--color-naranja-oscuro);
-}
-
 .btn-cancelar {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 10px 24px;
-  background-color: var(--color-superficie);
-  color: var(--color-texto-grisado);
-  border: 2px solid var(--color-borde);
-  border-bottom: 4px solid var(--color-borde-inferior);
-  border-radius: var(--radius-boton);
-  font-size: 0.95em;
-}
-
-.btn-cancelar:hover {
-  color: var(--color-acento);
-  border-color: var(--color-acento);
-  border-bottom-color: var(--color-acento-sombra);
 }
 
 /* Vista oculta */
@@ -126,7 +97,7 @@
 }
 
 .tarjeta-mensaje h2 {
-  color: var(--color-primario);
+  color: var(--color-naranja-panda);
   margin-bottom: 12px;
 }
 

@@ -4,22 +4,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../style.css">
-  <link rel="stylesheet" href="../dashboard/dashboard.css">
+  <link rel="stylesheet" href="../global.css">
   <link rel="stylesheet" href="leccion-interactiva.css">
 
   <title>Grupo O</title>
 </head>
 
 <body>
-  <header class="navegacion">
+  <header class="encabezado">
     <a href="/dashboard/dashboard.html" class="logo-marca">
       <img src="../img/logo-lingo.svg" alt="Lingo Panda" class="img-logo">
       <span class="nombre-brand">LingoPanda</span>
     </a>
     <nav class="contenedor-nav">
       <div class="progreso-bar">
-        <a href="../dashboard/dashboard.html" class="btn-salir">X</a>
+        <a href="../dashboard/dashboard.html" class="btn btn-rojo btn-salir">X</a>
         <label for="progreso"><strong>Progreso: </strong></label>
         <progress id="progreso" max="100" value="45">45%</progress>
         <span><strong>45%</strong></span>
@@ -40,34 +39,34 @@
         <h3>Arma la oracion:</h3>
 
         <input type="checkbox" id="p-el" class="chk-p chk-correcta">
-        <label for="p-el" class="btn">Él</label>
+        <label for="p-el" class="btn btn-chk">Él</label>
 
         <input type="checkbox" id="p-dejo" class="chk-p chk-correcta">
-        <label for="p-dejo" class="btn">dejó</label>
+        <label for="p-dejo" class="btn btn-chk">dejó</label>
 
         <input type="checkbox" id="p-ano" class="chk-p chk-correcta">
-        <label for="p-ano" class="btn">año</label>
+        <label for="p-ano" class="btn btn-chk">año</label>
 
         <input type="checkbox" id="p-paro" class="chk-p">
-        <label for="p-paro" class="btn">paró</label>
+        <label for="p-paro" class="btn btn-chk">paró</label>
 
         <input type="checkbox" id="p-de" class="chk-p chk-correcta">
-        <label for="p-de" class="btn">de</label>
+        <label for="p-de" class="btn btn-chk">de</label>
 
         <input type="checkbox" id="p-fumar" class="chk-p chk-correcta">
-        <label for="p-fumar" class="btn">fumar</label>
+        <label for="p-fumar" class="btn btn-chk">fumar</label>
 
         <input type="checkbox" id="p-fuma" class="chk-p">
-        <label for="p-fuma" class="btn">fuma</label>
+        <label for="p-fuma" class="btn btn-chk">fuma</label>
 
         <input type="checkbox" id="p-el2" class="chk-p chk-correcta">
-        <label for="p-el2" class="btn">el</label>
+        <label for="p-el2" class="btn btn-chk">el</label>
 
         <input type="checkbox" id="p-proximo" class="chk-p">
-        <label for="p-proximo" class="btn">próximo</label>
+        <label for="p-proximo" class="btn btn-chk">próximo</label>
 
         <input type="checkbox" id="p-pasado" class="chk-p chk-correcta">
-        <label for="p-pasado" class="btn">pasado</label>
+        <label for="p-pasado" class="btn btn-chk">pasado</label>
 
 
     </section>
@@ -91,7 +90,7 @@
 
 
     <section class="barra-inferior">
-      <button commandfor="modal-respuesta" command="show-modal" class="btn-comprobar">
+      <button commandfor="modal-respuesta" command="show-modal" class="btn btn-verde">
         Comprobar Respuesta
       </button>
     </section>

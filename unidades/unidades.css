@@ -1,357 +1,165 @@
 /* ==========================================================================
-   Navegación / Header Fijo
-   ========================================================================== */
-
-.navegacion {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    background-color: var(--color-superficie);
-    border-bottom: 2px solid var(--color-borde);
-    padding: 10px 24px;
-}
-
-.contenedor-nav {
-    max-width: 1100px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 16px;
-}
-
-/* Identidad Visual (Logo + Nombre) */
-.logo-marca {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    text-decoration: none;
-}
-
-.img-logo {
-    width: 38px;
-    height: 42px;
-    object-fit: contain;
-}
-
-.nombre-brand {
-    font-size: 1.35em;
-    font-weight: 800;
-    color: var(--color-primario);
-    letter-spacing: -0.5px;
-}
-
-/* Grupo de Enlaces */
-.menu-enlaces {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.btn-nav {
-    padding: 8px 16px;
-    font-size: 0.9em;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    color: var(--color-texto);
-    background-color: var(--color-superficie);
-    border: 2px solid var(--color-borde);
-    border-bottom: 4px solid var(--color-borde-inferior);
-    border-radius: var(--radius-boton);
-    transition:
-        transform 0.1s ease,
-        border-color 0.1s ease,
-        background-color 0.1s ease;
-}
-
-.btn-nav:hover {
-    background-color: var(--color-bg);
-    border-color: #d6d6d6;
-}
-
-.btn-nav:active {
-    transform: translateY(2px);
-    border-bottom-width: 2px;
-}
-
-/* Estado Activo para el botón seleccionado */
-.btn-nav.activo {
-    color: #ffffff;
-    background-color: var(--color-primario);
-    border-color: var(--color-primario-sombra);
-    border-bottom-color: var(--color-primario-sombra);
-}
-
-.btn-nav.activo:hover {
-    opacity: 0.95;
-}
-
-/* Bloque de Racha y Experiencia */
-.indicadores-header {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    background-color: var(--color-bg);
-    padding: 6px 14px;
-    border: 2px solid var(--color-borde);
-    border-radius: var(--radius-boton);
-    font-size: 0.9em;
-}
-
-.stat-item strong {
-    color: var(--color-texto);
-}
-
-.stat-item.racha strong {
-    color: var(--color-acento);
-}
-
-.stat-item.xp strong {
-    color: var(--color-resalte-sombra);
-}
-
-.separador {
-    color: var(--color-texto-grisado);
-    font-weight: 300;
-}
-
-/* ==========================================================================
-   Adaptación Mobile (Pantallas de menos de 768px)
-   ========================================================================== */
-
-@media screen and (max-width: 768px) {
-
-    /* El header superior solo mantiene el Logo y los Indicadores */
-    .contenedor-nav {
-        padding: 4px 0;
-    }
-
-    .nombre-brand {
-        font-size: 1.1em;
-        /* Logo más compacto */
-    }
-
-    /* Transformamos el menú a Barra inferior */
-    .menu-enlaces {
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        z-index: 1000;
-
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-
-        background-color: var(--color-superficie);
-        border-top: 2px solid var(--color-borde);
-        padding: 8px 12px;
-    }
-
-    /* Ajuste de los botones para estilo App Móvil */
-    .btn-nav {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 2px;
-        padding: 6px 12px;
-        font-size: 0.7em;
-    }
-
-    .nav-icono {
-        display: block;
-        font-size: 1.2em;
-    }
-
-    .btn-nav.activo .nav-icono {
-        transform: scale(1.15);
-    }
-
-    /* para que el menu no tape el footer */
-    body {
-        padding-bottom: 60px;
-    }
-}
-
-/* ==========================================================================
    Principal del unidades (Grilla de 2 columnas)
    ========================================================================== */
 body {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .unidades-layout {
-    max-width: 1100px;
-    width: 100%;
-    flex: 1;
-    margin: 0 auto;
+  max-width: 1100px;
+  width: 100%;
+  flex: 1;
+  margin: 0 auto;
 }
 
 .seccion-unidades {
-    margin: 4vh 2vh;
+  margin: 4vh 2vh;
 }
 
 .titulo-unidades {
-    background-color: var(--color-superficie);
-    border-radius: var(--radius-tarjeta);
-    padding: 2vh;
-    margin-bottom: 2vh;
-    border: 2px solid var(--color-borde-inferior);
-    /* border-bottom: 5px solid var(--color-borde-inferior); */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
+  background-color: var(--color-superficie);
+  border-radius: var(--radius-tarjeta);
+  padding: 2vh;
+  margin-bottom: 2vh;
+  border: 2px solid var(--color-borde-inferior);
+  /* border-bottom: 5px solid var(--color-borde-inferior); */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
 }
 
 .titulo-unidades h2 {
-    background-color: var(--color-primario);
-    color: var(--color-superficie);
-    font-size: .85em;
-    font-weight: 700;
-    padding: 4px 12px;
-    border-radius: 20px;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
+  background-color: var(--color-naranja-panda);
+  color: var(--color-superficie);
+  font-size: 0.85em;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .titulo-unidades h3 {
-    font-size: 1.5em;
-    font-weight: 700;
+  font-size: 1.5em;
+  font-weight: 700;
 }
 
 /* Grilla interna de Tarjetas de Cursos */
 .contenedor-tarjetas {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(25%, 1fr));
-    gap: 2vh;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(25%, 1fr));
+  gap: 2vh;
 }
 
 /* Enlace envolvente */
 .enlace-tarjeta {
-    text-decoration: none;
-    color: inherit;
-    display: block;
+  text-decoration: none;
+  color: inherit;
+  display: block;
 }
 
 /* Tarjeta de Curso con relieve 3D */
 .tarjeta-unidad {
-    min-height: 185px;
-    background-color: var(--color-superficie);
-    border: 2px solid var(--color-borde);
-    border-bottom: 5px solid var(--color-borde-inferior);
-    border-radius: var(--radius-tarjeta);
-    padding: 1.5vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 12px;
-    transition:
-        transform 0.1s ease,
-        border-color 0.1s ease,
-        background-color 0.1s ease;
+  min-height: 185px;
+  background-color: var(--color-superficie);
+  border: 2px solid var(--color-borde);
+  border-bottom: 5px solid var(--color-borde-inferior);
+  border-radius: var(--radius-tarjeta);
+  padding: 1.5vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+  transition:
+    transform 0.1s ease,
+    border-color 0.1s ease,
+    background-color 0.1s ease;
 }
 
 .tarjeta-unidad.activa {
-    border-color: var(--color-primario);
-    border-bottom-color: var(--color-primario-sombra);
-    background-color: var(--color-superficie);
+  border-color: var(--color-naranja-panda);
+  border-bottom-color: var(--color-naranja-oscuro);
+  background-color: var(--color-superficie);
 }
 
 .tarjeta-unidad.bloqueada {
-    background-color: #f9fafb;
-    border-color: #e5e7eb;
-    border-bottom-color: #d1d5db;
-    opacity: 0.6;
+  background-color: #f9fafb;
+  border-color: #e5e7eb;
+  border-bottom-color: #d1d5db;
+  opacity: 0.6;
 }
 
 .status-badge {
-    font-size: 0.85rem;
-    font-weight: 700;
-    display: flex;
-    align-items: center;
-    gap: 6px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
 .status-badge.verde {
-    color: #16a34a;
+  color: #16a34a;
 }
 
 .status-badge.naranja {
-    color: #ff7a00;
+  color: #ff7a00;
 }
 
 .status-badge.gris {
-    color: #6b7280;
+  color: #6b7280;
 }
 
 .unidad-titulo {
-    font-size: 1.1em;
-    font-weight: 700;
-    color: var(--color-texto);
-    margin: 4px 0;
+  font-size: 1.1em;
+  font-weight: 700;
+  color: var(--color-texto);
+  margin: 4px 0;
 }
 
 .unidad-estado-texto {
-    font-size: 0.85rem;
-    color: var(--color-texto-grisado);
-    font-weight: 500;
+  font-size: 0.85rem;
+  color: var(--color-texto-grisado);
+  font-weight: 500;
 }
 
 .unidad-estado-texto.resaltado {
-    color: var(--color-primario);
-    font-weight: 700;
+  color: var(--color-naranja-panda);
+  font-weight: 700;
 }
 
-/* Botón de Acción Gamificado */
 .boton-inicio {
-    margin-top: .5vh;
-    width: 100%;
-    background-color: var(--color-primario);
-    color: var(--color-superficie);
-    border: none;
-    border-bottom: 4px solid var(--color-primario-sombra);
-    border-radius: 12px;
-    padding: 10px 16px;
-    font-weight: 800;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: all 0.1s ease;
+  background-color: var(--color-naranja-panda);
+  color: var(--color-superficie);
 }
 
 .boton-inicio:hover {
-    background-color: var(--color-resalte);
-    border-bottom: 4px solid var(--color-resalte-sombra);
+  color: #ffffff;
+  border-color: var(--color-naranja-oscuro);
+  border-bottom-color: var(--color-naranja-oscuro);
 }
-
-.boton-inicio:active {
-    transform: translateY(2px);
-    border-bottom-width: 2px;
-}
-
 
 .info-unidad p {
-    font-size: 0.85em;
-    color: var(--color-texto-grisado);
-    margin-top: 2px;
+  font-size: 0.85em;
+  color: var(--color-texto-grisado);
+  margin-top: 2px;
 }
 
 .info-unidad p strong {
-    color: var(--color-texto);
+  color: var(--color-texto);
 }
 
 /* Ocación por defecto del icono en escritorio (Oculto si preferís solo texto) */
 .nav-icono {
-    display: none;
+  display: none;
 }
 
 @media screen and (width <600px) {
-    .contenedor-tarjetas {
-        display: flex;
-        flex-direction: column;
-    }
+  .contenedor-tarjetas {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 /* ==========================================================================
@@ -359,68 +167,68 @@ body {
    ========================================================================== */
 
 .footer-principal {
-    background-color: var(--color-superficie);
-    border-top: 2px solid var(--color-borde);
-    padding: 16px 20px;
+  background-color: var(--color-superficie);
+  border-top: 2px solid var(--color-borde);
+  padding: 16px 20px;
 
-    /* Flexbox directo en la etiqueta <footer> */
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    gap: 12px;
-    max-width: 100%;
+  /* Flexbox directo en la etiqueta <footer> */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  max-width: 100%;
 }
 
 /* Marca */
 .marca-footer {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
 
 .logo-footer {
-    font-size: 1.25em;
-    color: var(--color-primario);
+  font-size: 1.25em;
+  color: var(--color-naranja-panda);
 }
 
 .marca-footer span {
-    font-size: 0.85em;
-    color: var(--color-texto-grisado);
+  font-size: 0.85em;
+  color: var(--color-texto-grisado);
 }
 
 /* Navegación */
 .links-footer {
-    display: flex;
-    gap: 16px;
+  display: flex;
+  gap: 16px;
 }
 
 .links-footer a {
-    font-size: 0.9em;
-    font-weight: bold;
-    color: var(--color-texto-grisado);
-    transition: color 0.15s ease;
+  font-size: 0.9em;
+  font-weight: bold;
+  color: var(--color-texto-grisado);
+  transition: color 0.15s ease;
 }
 
 .links-footer a:hover {
-    color: var(--color-primario);
+  color: var(--color-naranja-panda);
 }
 
 /* Copyright (Ocupa todo el ancho abajo) */
 .copyright-footer {
-    flex-basis: 100%;
-    text-align: center;
-    padding-top: 8px;
-    border-top: 1px solid var(--color-borde);
-    color: var(--color-texto-grisado);
-    font-size: 0.8em;
-    font-weight: 500;
+  flex-basis: 100%;
+  text-align: center;
+  padding-top: 8px;
+  border-top: 1px solid var(--color-borde);
+  color: var(--color-texto-grisado);
+  font-size: 0.8em;
+  font-weight: 500;
 }
 
 /* Responsivo */
 @media screen and (max-width: 600px) {
-    .footer-principal {
-        flex-direction: column;
-        text-align: center;
-    }
+  .footer-principal {
+    flex-direction: column;
+    text-align: center;
+  }
 }
