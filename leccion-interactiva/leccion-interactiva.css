@@ -2,8 +2,8 @@
 .progreso-bar {
   display: flex;
   align-items: center;
-  gap: 20px;
-  padding: 10px;
+  gap: 1.25rem;
+  padding: 0.63rem;
 }
 
 label,
@@ -51,9 +51,9 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  gap: 24px;
+  gap: 1.5rem;
   width: 100%;
-  max-width: 800px;
+  max-width: 50rem;
   margin: 0 auto;
 }
 
@@ -64,17 +64,17 @@ body {
 .leccion-respuesta {
   border-top: 2px solid var(--color-naranja-panda);
   width: 100%;
-  max-width: 800px;
-  padding: 24px;
+  max-width: 50rem;
+  padding: 1.5rem;
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 0.75rem;
   align-items: center;
   justify-content: center;
 }
 .leccion-respuesta h3,
 .leccion-oracion h3 {
-  padding-bottom: 16px;
+  padding-bottom: 1rem;
   font-size: 1.5em;
   width: 100%;
 }
@@ -104,7 +104,7 @@ input[type="checkbox"] {
   background: transparent;
   padding: 0;
   margin: auto;
-  max-width: 400px;
+  max-width: 25rem;
   width: 90%;
 }
 
@@ -118,7 +118,7 @@ input[type="checkbox"] {
 .modal-dialog .msj-respuesta {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 1rem;
   align-items: center;
 }
 
@@ -130,8 +130,8 @@ input[type="checkbox"] {
   justify-content: center;
   margin: 0 auto;
   width: 100%;
-  max-width: 800px;
-  padding: 20px;
+  max-width: 50rem;
+  padding: 1.25rem;
   border-top: 2px solid var(--color-naranja-oscuro);
   background-color: var(--color-superficie);
 }
@@ -141,15 +141,15 @@ input[type="checkbox"] {
   align-items: center;
   justify-content: center;
   width: 100%;
-  max-width: 300px;
-  padding: 12px;
+  max-width: 18.75rem;
+  padding: 0.75rem;
   font-size: 1rem;
   font-weight: bold;
   color: #fff;
   background-color: var(--color-verde-exito);
   border: none;
   border-bottom: 4px solid var(--color-verde-oscuro);
-  border-radius: var(--radius-boton, 12px);
+  border-radius: var(--radius-boton, 0.75rem);
   cursor: pointer;
 }
 

@@ -9,31 +9,31 @@ main {
   align-items: center;
   justify-content: center;
   width: 100%;
-  max-width: 1100px;
+  max-width: 68.75rem;
   margin: 0 auto;
-  padding: 40px 24px;
+  padding: 2.5rem 1.5rem;
 }
 
 .login-form {
   width: 100%;
-  max-width: 550px;
+  max-width: 34.38rem;
   margin: auto;
   display: flex;
-  gap: 24px;
+  gap: 1.5rem;
   flex-direction: column;
   justify-content: center;
   background-color: var(--color-superficie);
   border: 2px solid var(--color-borde);
   border-bottom: 5px solid var(--color-borde-inferior);
   border-radius: var(--radius-tarjeta);
-  padding: 24px;
+  padding: 1.5rem;
 }
 
 .login-input_container {
   display: grid;
   grid-template-columns: max-content 1fr;
   align-items: center;
-  gap: 16px 12px;
+  gap: 1rem 0.75rem;
 }
 
 .login-input_container label {
@@ -44,7 +44,7 @@ main {
 
 .login-input_container input {
   width: 100%;
-  padding: 10px 14px;
+  padding: 0.63rem 0.88rem;
   font-family: var(--fuente-base);
   font-size: 0.95rem;
   color: var(--color-texto);
@@ -64,7 +64,7 @@ main {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 0.5rem;
 }
 
 .login-links span {
@@ -75,7 +75,7 @@ main {
 .footer {
   margin-top: auto;
   border-top: 2px solid var(--color-borde);
-  padding: 16px;
+  padding: 1rem;
   text-align: center;
   background-color: var(--color-superficie);
 }
@@ -90,13 +90,13 @@ main {
     display: none;
   }
   main {
-    padding: 20px 24px 40px;
+    padding: 1.25rem 1.5rem 2.5rem;
     align-items: flex-start;
   }
 
   .login-form {
-    gap: 20px;
-    padding: 20px;
+    gap: 1.25rem;
+    padding: 1.25rem;
   }
 
   .login-input_container {

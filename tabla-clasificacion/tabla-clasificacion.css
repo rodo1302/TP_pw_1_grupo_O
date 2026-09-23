@@ -24,7 +24,7 @@ body {
   align-items: center;
   flex-direction: column;
   width: 100%;
-  max-width: 800px;
+  max-width: 50rem;
   margin: 0 auto;
 }
 
@@ -54,7 +54,7 @@ body {
 }
 
 .img-liga {
-  height: 72px;
+  height: 4.5rem;
 }
 
 /* ==========================================================================
