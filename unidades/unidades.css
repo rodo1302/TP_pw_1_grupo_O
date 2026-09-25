@@ -129,16 +129,13 @@ body {
   font-weight: 700;
 }
 
-.boton-inicio {
-  background-color: var(--color-naranja-panda);
+.boton-continuar {
   color: var(--color-superficie);
-}
-
-.boton-inicio:hover {
-  color: #ffffff;
+  background-color: var(--color-naranja-panda);
   border-color: var(--color-naranja-oscuro);
   border-bottom-color: var(--color-naranja-oscuro);
 }
+
 
 .info-unidad p {
   font-size: 0.85em;
@@ -153,6 +150,11 @@ body {
 /* Ocación por defecto del icono en escritorio (Oculto si preferís solo texto) */
 .nav-icono {
   display: none;
+}
+
+.unidades-icon{
+  width: 1rem;
+  height: auto;
 }
 
 @media screen and (width <600px) {
