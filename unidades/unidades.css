@@ -69,6 +69,7 @@ body {
   border-radius: var(--radius-tarjeta);
   padding: 1.5vh;
   display: flex;
+  justify-content: space-around;
   flex-direction: column;
   align-items: center;
   text-align: center;
@@ -89,7 +90,7 @@ body {
   background-color: #f9fafb;
   border-color: #e5e7eb;
   border-bottom-color: #d1d5db;
-  opacity: 0.6;
+  opacity: 0.8;
 }
 
 .status-badge {
@@ -99,6 +100,7 @@ body {
   align-items: center;
   gap: 0.38rem;
 }
+
 .status-badge.verde {
   color: #16a34a;
 }
@@ -136,6 +138,12 @@ body {
   border-bottom-color: var(--color-naranja-oscuro);
 }
 
+.boton-continuar:active,
+.btn-amarillo:active,
+.btn-verde:active {
+  border-bottom-width: 4px;
+  border-color: transparent;
+}
 
 .info-unidad p {
   font-size: 0.85em;
@@ -152,7 +160,7 @@ body {
   display: none;
 }
 
-.unidades-icon{
+.unidades-icon {
   width: 1rem;
   height: auto;
 }
@@ -161,76 +169,5 @@ body {
   .contenedor-tarjetas {
     display: flex;
     flex-direction: column;
-  }
-}
-
-/* ==========================================================================
-   Footer Principal
-   ========================================================================== */
-
-.footer-principal {
-  background-color: var(--color-superficie);
-  border-top: 2px solid var(--color-borde);
-  padding: 1rem 1.25rem;
-
-  /* Flexbox directo en la etiqueta <footer> */
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  gap: 0.75rem;
-  max-width: 100%;
-}
-
-/* Marca */
-.marca-footer {
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.logo-footer {
-  font-size: 1.25em;
-  color: var(--color-naranja-panda);
-}
-
-.marca-footer span {
-  font-size: 0.85em;
-  color: var(--color-texto-grisado);
-}
-
-/* Navegación */
-.links-footer {
-  display: flex;
-  gap: 1rem;
-}
-
-.links-footer a {
-  font-size: 0.9em;
-  font-weight: bold;
-  color: var(--color-texto-grisado);
-  transition: color 0.15s ease;
-}
-
-.links-footer a:hover {
-  color: var(--color-naranja-panda);
-}
-
-/* Copyright (Ocupa todo el ancho abajo) */
-.copyright-footer {
-  flex-basis: 100%;
-  text-align: center;
-  padding-top: 0.5rem;
-  border-top: 1px solid var(--color-borde);
-  color: var(--color-texto-grisado);
-  font-size: 0.8em;
-  font-weight: 500;
-}
-
-/* Responsivo */
-@media screen and (max-width: 600px) {
-  .footer-principal {
-    flex-direction: column;
-    text-align: center;
   }
 }
