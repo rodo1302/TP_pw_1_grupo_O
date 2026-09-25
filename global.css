@@ -98,6 +98,13 @@ ol {
   border-color: var(--color-verde-oscuro);
 }
 
+.btn-amarillo {
+  text-align: center;
+  color: #ffffff;
+  background-color: var(--color-amarillo-racha);
+  border-color: var(--color-amarillo-oscuro);
+}
+
 .btn-rojo {
   text-align: center;
   background-color: var(--color-superficie);
@@ -115,6 +122,13 @@ ol {
   border-color: var(--color-naranja-oscuro);
   border-bottom-color: var(--color-naranja-oscuro);
 }
+
+.btn-amarillo:hover {
+  background-color: var(--color-naranja-panda);
+  border-color: var(--color-naranja-oscuro);
+  border-bottom-color: var(--color-naranja-oscuro);
+}
+
 .btn-rojo:hover {
   color: var(--color-superficie);
   border-color: var(--color-rojo-fuego);
@@ -262,7 +276,7 @@ ol {
 .links-footer a {
   font-size: 0.9em;
   font-weight: bold;
-  color: var(--color-texto-grisado);
+  color: var(--color-naranja-oscuro);
   transition: color 0.15s ease;
 }
 
