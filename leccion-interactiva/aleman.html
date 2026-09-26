@@ -23,7 +23,6 @@
         <progress id="progreso" max="100" value="12">12%</progress>
         <span><strong>12%</strong></span>
       </div>
-
     </nav>
     <aside class="indicadores-header">
       <p class="stat-item racha">❤️❤️❤️ <strong> Vidas: 3</strong></p>
@@ -33,7 +32,15 @@
     <section class="leccion">
       <article class="leccion-oracion">
         <h3>Traduce la oración:</h3>
-        <p>"Ich trinke gerne Kaffee"</p>
+        <figure class="reproductor-audio-duo">
+          <audio id="audio" src="../audio/aleman.mp3" preload="auto">
+            Tu navegador no soporta el elemento de audio.
+          </audio>
+          <button type="button" class="btn" onclick="document.getElementById('audio').play()">
+            🔊
+          </button>
+          <figcaption class="texto-ejercicio">"Ich trinke gerne Kaffee"</figcaption>
+        </figure>
       </article>
       <article class="leccion-respuesta">
         <h3>Arma la oracion:</h3>
