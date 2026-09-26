@@ -12,7 +12,7 @@
 <body>
 
   <header class="encabezado">
-    <a href="../index.html" class="logo-marca">
+    <a href="#" class="logo-marca">
       <img src="../img/logo-lingo.svg" alt="Lingo Panda" class="img-logo">
       <span class="nombre-brand">LingoPanda</span>
     </a>
@@ -24,6 +24,10 @@
         <li><a href="../tabla-clasificacion/tabla-clasificacion.html" class="btn btn-nav ">Clasificación</a></li>
       </ul>
     </nav>
+
+    <a href="../cerrar-sesion/cerrar-sesion.html" type="button" class="btn btn-rojo">
+      <img src="../img/cerrar-sesion.svg" alt="Salir" class="img-icono-salir">
+    </a>
 
     <aside class="indicadores-header">
       <p class="stat-item racha">🔥 <strong>5 dias</strong>
@@ -39,6 +43,8 @@
 
         <a href="../unidades/ingles.html" class="enlace-tarjeta">
           <article class="tarjeta-curso">
+            <input type="checkbox" name="ingles" id="ingles" class="disable">
+            <label for="ingles" class="btn btn-rojo btn-chk">-</label>
             <img src="../img/ingles.svg" alt="Brazón de Inglaterra" class="img-bandera">
             <div class="info-curso">
               <h3>Inglés</h3>
@@ -50,6 +56,8 @@
 
         <a href="../unidades/aleman.html" class="enlace-tarjeta">
           <article class="tarjeta-curso">
+            <input type="checkbox" name="aleman" id="aleman" class="disable">
+            <label for="aleman" class="btn btn-rojo btn-chk">-</label>
             <img src="../img/aleman.svg" alt="Bandera de Alemania" class="img-bandera">
             <div class="info-curso">
               <h3>Alemán</h3>
@@ -61,6 +69,8 @@
 
         <a href="../unidades/chino.html" class="enlace-tarjeta">
           <article class="tarjeta-curso">
+            <input type="checkbox" name="chino" id="chino" class="disable">
+            <label for="chino" class="btn btn-rojo btn-chk">-</label>
             <img src="../img/chino.svg" alt="Bandera de China" class="img-bandera">
             <div class="info-curso">
               <h3>Chino</h3>
@@ -70,6 +80,8 @@
           </article>
         </a>
 
+        <input type="checkbox" name="mostrar" id="mostrar" class="mostrar-cursos">
+        <label for="mostrar" class="btn btn-mostrar-cursos">Mostrar cursos</label>
       </div>
     </section>
 

@@ -79,6 +79,36 @@ body {
   width: 100%;
 }
 
+/* Contenedor tipo tarjeta */
+.reproductor-audio-duo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  background-color: var(--color-superficie);
+  border: 2px solid var(--color-borde);
+  border-bottom: 4px solid var(--color-borde-inferior);
+  border-radius: var(--radius-tarjeta);
+  padding: 1rem 1.25rem;
+  margin: 1rem 0;
+}
+
+/* Adaptación del reproductor nativo */
+.reproductor-audio-duo button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 1.8rem;
+}
+
+/* Texto de la frase */
+.texto-ejercicio {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--color-texto);
+  margin: 0;
+}
+
 /* botones */
 
 input[type="checkbox"] {
