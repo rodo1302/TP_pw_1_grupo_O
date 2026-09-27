@@ -170,7 +170,7 @@ ol {
   background-color: var(--color-superficie);
   border-bottom: 2px solid var(--color-borde);
   padding: 1em 2em;
-
+  z-index: 1000;
   position: sticky;
   margin: 0 auto;
   width: 100%;
@@ -350,7 +350,7 @@ ol {
     bottom: 0;
     left: 0;
     right: 0;
-    z-index: 9999;
+    z-index: 1000;
     display: flex;
     align-items: center;
     background-color: var(--color-superficie);
