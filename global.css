@@ -193,7 +193,6 @@ ol {
   font-size: 1.35em;
   font-weight: 800;
   color: var(--color-naranja-panda);
-  letter-spacing: -0.03rem;
 }
 
 .descripcion-brand {
@@ -240,6 +239,7 @@ ol {
     flex-direction: column;
     text-align: center;
     justify-content: center;
+    gap: 0.5rem;
   }
 }
 
@@ -314,13 +314,34 @@ ol {
    ========================================================================== */
 
 @media screen and (max-width: 768px) {
-  /* El header superior solo mantiene el Logo y los Indicadores */
-  .contenedor-nav {
-    padding: 0.25rem 0;
+  /* El header superior solo mantiene el Logo, Boton salir y los Indicadores */
+
+  .encabezado {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+      "logo logo"
+      "btn-salir indicadores";
+    justify-items: center;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem;
   }
 
-  .nombre-brand {
-    font-size: 1.1em;
+  .logo-marca {
+    grid-area: logo;
+    justify-content: center;
+  }
+
+  .encabezado > .btn-rojo {
+    grid-area: btn-salir;
+    justify-self: start;
+  }
+
+  .indicadores-header {
+    grid-area: indicadores;
+    justify-self: start;
+    margin: 0;
   }
 
   /* Transformamos el menú a Barra inferior */
@@ -329,15 +350,18 @@ ol {
     bottom: 0;
     left: 0;
     right: 0;
-    z-index: 1000;
-
+    z-index: 9999;
     display: flex;
-    justify-content: space-around;
     align-items: center;
-
     background-color: var(--color-superficie);
     border-top: 2px solid var(--color-borde);
     padding: 0.5rem 0.75rem;
+  }
+
+  .menu-enlaces li {
+    flex: 1;
+    display: flex;
+    justify-content: center;
   }
 
   /* Ajuste de los botones para estilo App Móvil */
@@ -345,9 +369,11 @@ ol {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.13rem;
+    justify-content: center;
+    width: 100%;
+    gap: 0.1rem;
     padding: 0.38rem 0.75rem;
-    font-size: 0.7em;
+    font-size: 1rem;
   }
 
   .nav-icono {
@@ -355,12 +381,8 @@ ol {
     font-size: 1.2em;
   }
 
-  .btn-nav.activo .nav-icono {
-    transform: scale(1.15);
-  }
-
   /* para que el menu no tape el footer */
   body {
-    padding-bottom: 3.75rem;
+    padding-bottom: 4.5rem;
   }
 }
