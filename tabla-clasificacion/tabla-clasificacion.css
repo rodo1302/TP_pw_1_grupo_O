@@ -92,10 +92,11 @@ td {
   font-size: 0.95rem;
 }
 .primero,
-.tercero {
+.tercero,
+.segundo {
   background-color: var(--color-amarillo-racha);
 }
-.segundo {
+.usuario {
   background-color: var(--color-verde-exito);
   font-weight: bold;
 }
@@ -106,4 +107,22 @@ td {
     padding: 0.5em 0.4em;
     font-size: 0.85rem;
   }
+
+  .liga-actual p {
+    margin-left: 0.5rem;
+  }
+}
+/* ==========================================================================
+    Otras ligas
+   ========================================================================== */
+
+.otras-ligas {
+  display: flex;
+  text-align: center;
+  gap: 1rem;
+  padding: 0.5rem 0.5rem;
+}
+
+.otras-ligas a {
+  font-size: 0.6rem;
 }
