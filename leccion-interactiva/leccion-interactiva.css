@@ -28,6 +28,9 @@ label,
   .contenedor-nav {
     display: flex;
     flex-direction: column;
+    grid-area: logo;
+    justify-content: center;
+    align-items: center;
   }
 }
 
